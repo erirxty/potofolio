@@ -1,0 +1,446 @@
+ <?php get_header(); ?>
+    <div class="main-content" id="mainContent">
+      <div class="container">
+        <section class="section">
+          <h2 class="section-title">本日のおすすめ（作品紹介）</h2>
+          <div class="menu-grid">
+            <div class="menu-item" onclick="showWork('dental')">
+              <h3>本日の特選 - 歯科医院サイト</h3>
+              <p>
+                清潔感と信頼感を重視した歯科医院のWebサイト。レスポンシブ対応で、PC・スマホ両方で快適にご覧いただけます。
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">WordPress</span>
+                <span class="tech-tag">レスポンシブ</span>
+              </div>
+            </div>
+            <div class="menu-item" onclick="showWork('accordion')">
+              <h3>前菜 - アコーディオンメニュー</h3>
+              <p>
+                クリックで開閉するインタラクティブなUI。ドラえもんの道具をテーマにした実装例です。
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">UI/UX</span>
+              </div>
+            </div>
+            <div class="menu-item" onclick="showWork('modal')">
+              <h3>一品料理 - モーダル + 音声</h3>
+              <p>
+                モーダルウィンドウと音声プレーヤーを組み合わせた作品。スプランキーゲームの紹介ページです。
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Modal</span>
+              </div>
+            </div>
+            <div class="menu-item" onclick="showWork('slider')">
+              <h3>看板メニュー - 画像スライダー</h3>
+              <p>
+                ページネーション付きの画像スライダー。サッポロビールのプロモーションサイト風デザインです。
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Slider</span>
+              </div>
+            </div>
+            <div class="menu-item" onclick="showWork('tab')">
+              <h3>定食 - タブ切り替え</h3>
+              <p>
+                レシピサイトのタブメニュー実装。和食・洋食・中華・デザートをスムーズに切り替えられます。
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Tab UI</span>
+              </div>
+            </div>
+            <div class="menu-item" onclick="showWork('design')">
+              <h3>デザート - グラフィック作品</h3>
+              <p>
+                Photoshopを使用したデザイン作品集。バナー、ロゴ、UI要素など幅広いデザインワークをご紹介。
+              </p>
+              <div class="work-tech">
+                <span class="tech-tag">Photoshop</span>
+                <span class="tech-tag">デザイン</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">店主紹介（プロフィール）</h2>
+          <div class="profile-content">
+            <div>
+              <div class="profile-avatar">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/family.jpg" alt="店主の写真" /><style>
+                  .profile-avatar img {
+                    width: 230px;
+                    height: 230px;
+                    border-radius: 20%;
+                    object-fit: cover;
+                    border: 3px solid #f4d03f;
+                  }
+                </style>
+              </div>
+            </div>
+            <div>
+              <p>
+                大学卒業後、異業種にて培った顧客対応力を活かし、Webの世界へ転身いたしました。スクールでWebデザインと実装の基礎を習得し、現在は実務に直結するポートフォリオ制作に注力しています。「見て楽しい」「使って分かりやすい」Web制作を通じて、貴社に貢献したいと考えております。
+              </p>
+              <div style="margin-top: 20px">
+                <h3 style="color: #f4d03f; margin-bottom: 15px">学習範囲：</h3>
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">WordPress</span>
+              </div>
+              <div style="margin-top: 20px">
+                <h3 style="color: #f4d03f; margin-bottom: 15px">
+                  デザインツール：
+                </h3>
+                <span class="skill-item">Figma</span>
+                <span class="skill-item">Photoshop</span>
+              </div>
+              <p style="margin-top: 20px; color: #f4d03f; font-weight: bold">
+                「見て楽しい」「使って分かりやすい」<br />そんなWeb制作を目指しています。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">ご予約（お問い合わせ）</h2>
+          <div class="contact-form">
+            <p style="text-align: center; margin-bottom: 30px; color: #e8e8e8">
+              ご覧いただきありがとうございます。<br />
+              作品やスキルについてのご質問は、下記フォームからご連絡ください。<br />
+              <small>（※面接用ポートフォリオです）</small>
+            </p>
+            <form onsubmit="submitForm(event)">
+              <div class="form-group">
+                <label for="name">お名前</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="message">メッセージ</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">メッセージを送る</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="workModal" class="work-modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <div id="dental-content" class="work-detail-template" style="display: none">
+      <h2 style="color: #ff6b35; margin-bottom: 20px">🦷 歯科医院Webサイト</h2>
+      <p style="color: #e8e8e8; margin-bottom: 15px">
+        清潔感と信頼感を重視した歯科医院のWebサイト制作
+      </p>
+      <div class="device-tabs">
+        <button class="device-tab active" onclick="switchDevice('pc')">
+          💻 PC版
+        </button>
+        <button class="device-tab" onclick="switchDevice('mobile')">
+          📱 スマホ版
+        </button>
+      </div>
+      <div id="pc-preview" class="device-frame">
+        <h4 style="color: #f4d03f">歯科医院サイト - PC版</h4>
+       <img src="<?php echo get_template_directory_uri(); ?>/images/PC.jpg"
+          alt="PC版プレビュー"
+          style="max-width: 90%; border-radius: 8px; margin-top: 15px"
+        />
+      </div>
+      <div id="mobile-preview" class="device-frame" style="display: none">
+        <h4 style="color: #f4d03f">歯科医院サイト - スマホ版</h4>
+       <img src="<?php echo get_template_directory_uri(); ?>/images/keitai.jpg"
+          alt="スマホ版プレビュー"
+          style="max-width: 90%; border-radius: 8px; margin-top: 15px"
+        />
+      </div>
+      <h4 style="color: #f4d03f; margin-top: 20px">制作のポイント</h4>
+      <ul style="color: #e8e8e8; line-height: 1.8; padding-left: 20px">
+        <li>患者さんの不安を取り除く温かみのあるデザイン</li>
+        <li>PC・スマホ両対応のレスポンシブ設計</li>
+        <li>診療内容を分かりやすく整理</li>
+      </ul>
+    </div>
+
+    <div
+      id="accordion-content"
+      class="work-detail-template"
+      style="display: none"
+    >
+      <h2 style="color: #ff6b35; margin-bottom: 20px">
+        📂 アコーディオンメニュー
+      </h2>
+      <p style="color: #e8e8e8; margin-bottom: 15px">
+        ドラえもんの道具をテーマにした開閉式メニュー
+      </p>
+      <div
+        style="
+          background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+          padding: 40px;
+          border-radius: 10px;
+          text-align: center;
+          margin: 20px 0;
+        "
+      >
+        <img src="<?php echo get_template_directory_uri(); ?>/images/doraemon.png"
+          alt="アコーディオンメニュー"
+          style="
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+          "
+        />
+       <img src="<?php echo get_template_directory_uri(); ?>/images/doraemon2.png"
+          alt="アコーディオン開閉"
+          style="
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            margin-top: 15px;
+          "
+        />
+        <p style="color: white; margin-top: 15px">
+          クリックで開閉するアコーディオンメニューのデモ
+        </p>
+      </div>
+      <h4 style="color: #f4d03f; margin-top: 20px">実装機能</h4>
+      <ul style="color: #e8e8e8; line-height: 1.8; padding-left: 20px">
+        <li>クリックで開閉するアコーディオン</li>
+        <li>スムーズなアニメーション</li>
+      </ul>
+    </div>
+
+    <div id="modal-content" class="work-detail-template" style="display: none">
+      <h2 style="color: #ff6b35; margin-bottom: 20px">
+        🎵 モーダル + 音声プレーヤー
+      </h2>
+      <p style="color: #e8e8e8; margin-bottom: 15px">
+        スプランキーゲームの紹介ページ
+      </p>
+      <div
+        style="
+          background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+          padding: 40px;
+          border-radius: 10px;
+          text-align: center;
+          margin: 20px 0;
+        "
+      >
+       <img src="<?php echo get_template_directory_uri(); ?>/images/modal.png"
+          alt="モーダルウィンドウと音声プレーヤー"
+          style="
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+          "
+        />
+        <img src="<?php echo get_template_directory_uri(); ?>/images/modal2.png"
+          alt="音声プレーヤー"
+          style="
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            margin-top: 15px;
+          "
+        />
+        <p style="color: #333; margin-top: 15px">
+          モーダルウィンドウ + 音声プレーヤーのデモ
+        </p>
+      </div>
+      <h4 style="color: #f4d03f; margin-top: 20px">実装機能</h4>
+      <ul style="color: #e8e8e8; line-height: 1.8; padding-left: 20px">
+        <li>モーダルウィンドウの開閉</li>
+        <li>HTML5 Audio APIによる音声再生</li>
+        <li>再生/停止コントロール</li>
+      </ul>
+    </div>
+
+    <div id="slider-content" class="work-detail-template" style="display: none">
+      <h2 style="color: #ff6b35; margin-bottom: 20px">🍺 画像スライダー</h2>
+      <p style="color: #e8e8e8; margin-bottom: 15px">
+        サッポロビールのプロモーションサイト風
+      </p>
+      <div
+        style="
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          padding: 40px;
+          border-radius: 10px;
+          text-align: center;
+          margin: 20px 0;
+        "
+      >
+        <img src="<?php echo get_template_directory_uri(); ?>/images/swiper1.png"
+          alt="画像スライダー"
+          style="
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+          "
+        />
+       <img src="<?php echo get_template_directory_uri(); ?>/images/swiper2.png"
+          alt="ページネーション"
+          style="
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            margin-top: 15px;
+          "
+        />
+        <p style="color: white">スライダー + ページネーションのデモ</p>
+      </div>
+      <h4 style="color: #f4d03f; margin-top: 20px">実装機能</h4>
+      <ul style="color: #e8e8e8; line-height: 1.8; padding-left: 20px">
+        <li>画像スライダー機能</li>
+        <li>ページネーション（1 2 3 4 5）</li>
+        <li>タッチスワイプ対応</li>
+      </ul>
+    </div>
+
+    <div id="tab-content" class="work-detail-template" style="display: none">
+      <h2 style="color: #ff6b35; margin-bottom: 20px">🍱 タブ切り替え機能</h2>
+      <p style="color: #e8e8e8; margin-bottom: 15px">
+        レシピサイトのタブメニュー実装
+      </p>
+      <div
+        style="
+          background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+          padding: 40px;
+          border-radius: 10px;
+          text-align: center;
+          margin: 20px 0;
+        "
+      >
+       <img src="<?php echo get_template_directory_uri(); ?>/images/tabmenu1.png"
+          alt="タブ切り替え"
+          style="
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+          "
+        />
+        <img src="<?php echo get_template_directory_uri(); ?>/images/tabmenu.png"
+          alt="タブコンテンツ"
+          style="
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            margin-top: 15px;
+          "
+        />
+        <p style="color: #333">和食・洋食・中華・デザートのタブ</p>
+      </div>
+      <h4 style="color: #f4d03f; margin-top: 20px">実装機能</h4>
+      <ul style="color: #e8e8e8; line-height: 1.8; padding-left: 20px">
+        <li>タブクリックでコンテンツ切り替え</li>
+        <li>アクティブタブのハイライト</li>
+        <li>スムーズなアニメーション</li>
+      </ul>
+    </div>
+
+    <div id="design-content" class="work-detail-template" style="display: none">
+      <h2 style="color: #ff6b35; margin-bottom: 20px">
+        🎨 グラフィックデザイン作品
+      </h2>
+      <p style="color: #e8e8e8; margin-bottom: 15px">
+        Photoshopで制作したバナーデザイン集
+      </p>
+      <div class="design-slider">
+        <div class="design-slide active">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/coconala.jpg"
+            alt="ココナラバナー"
+            style="
+              max-width: 70%;
+              border-radius: 10px;
+              box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            "
+          />
+          <h4 style="color: #f4d03f; margin-top: 15px">
+            ココナラ プロモーションバナー
+          </h4>
+          <p style="color: #e8e8e8">
+            在宅ワーク・副業訴求用のWebバナーデザイン
+          </p>
+        </div>
+        <div class="design-slide">
+         <img src="<?php echo get_template_directory_uri(); ?>/images/burger.jpg"
+            alt="ハンバーガー広告"
+            style="
+              max-width: 90%;
+              border-radius: 10px;
+              box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            "
+          />
+          <h4 style="color: #f4d03f; margin-top: 15px">
+            激旨ダブルチーズバーガー
+          </h4>
+          <p style="color: #e8e8e8">期間限定キャンペーン用の広告バナー</p>
+        </div>
+        <div class="design-slide">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/chocolate.jpg"
+            alt="チョコレート広告"
+            style="
+              max-width: 90%;
+              border-radius: 10px;
+              box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            "
+          />
+          <h4 style="color: #f4d03f; margin-top: 15px">
+            Silky Bitter チョコレート
+          </h4>
+          <p style="color: #e8e8e8">
+            高級チョコレートブランドのプロモーションバナー
+          </p>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" onclick="changeDesignSlide(-1)">
+          ❮ 前へ
+        </button>
+        <div class="slider-dots">
+          <span class="slider-dot active" onclick="showDesignSlide(1)"></span>
+          <span class="slider-dot" onclick="showDesignSlide(2)"></span>
+          <span class="slider-dot" onclick="showDesignSlide(3)"></span>
+        </div>
+        <button class="slider-btn" onclick="changeDesignSlide(1)">
+          次へ ❯
+        </button>
+      </div>
+      <h4 style="color: #f4d03f; margin-top: 30px">制作物</h4>
+      <ul style="color: #e8e8e8; line-height: 1.8; padding-left: 20px">
+        <li>Webサイト用バナーデザイン</li>
+        <li>商品プロモーション用広告</li>
+        <li>期間限定キャンペーンバナー</li>
+      </ul>
+    </div>
+
+  <script src="main.js"></script>
+
+<?php get_footer(); ?>
+  </body>
+</html>
+
+
