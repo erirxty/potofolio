@@ -111,7 +111,7 @@ body {
 
 .main-content {
   min-height: 100vh;
-  padding: 50px 20px;
+  padding: 0 20px;
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease;
@@ -129,7 +129,7 @@ body {
 
 .section {
   background: rgba(139, 69, 19, 0.2);
-  margin: 40px 0;
+  margin: 0 0 40px 0; /* margin: 40px 0; から変更 */
   padding: 40px;
   border-radius: 15px;
   border: 2px solid rgba(255, 107, 53, 0.3);

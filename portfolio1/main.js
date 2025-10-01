@@ -7,6 +7,10 @@ function enterShop() {
   norenSection.style.transition = "transform 1s ease-in-out";
 
   setTimeout(() => {
+    norenSection.style.display = "none"; // 完全に非表示
+  }, 1000); // アニメーション終了後
+
+  setTimeout(() => {
     mainContent.classList.add("show");
   }, 500);
 }
