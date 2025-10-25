@@ -17,7 +17,7 @@
 <section class="noren-section" id="noren">
     <div class="noren">
         <h1>Web職人の小料理屋 </h1>
-        <p class="catchphrase">美しいWebデザインと実装をお届けします</p>
+        <p class="catchphrase">楽しいWebデザインと実装をお届けします</p>
         
         <button class="enter-btn" onclick="enterShop()">のれんをくぐる</button>
     </div>
